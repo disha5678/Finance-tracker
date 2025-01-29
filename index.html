@@ -20,7 +20,7 @@
 </div>
 <br>
 <br>
-    <button class="curved-button">Sign Up Now</button> 
+    <button class="curved-button" onclick="showRegistrationForm()">Sign Up Now</button> 
     </div> 
     <div class="features-section">
         <div class="feature">
@@ -40,7 +40,22 @@
             <h3>Access Anywhere</h3>
             <p>Track your expenses on the go with our desktop-friendly app.</p>
         </div>
-    </div> 
+    </div>
+    
+    <div id="registrationForm">
+        <h3 class="register">Register</h3>
+        <form>
+            Username <br>
+            <input type="text" id="username" placeholder="Username" required><br>
+            Email <br>
+            <input type="email" id="email" placeholder="Email" required><br>
+            Password <br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="submit">Register</button>
+            <br>
+        </form>
+       <span class="form">Already have an account? </span><a href="#" class="login-link" onclick="showLoginForm()">Login</a>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
