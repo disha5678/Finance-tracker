@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+color: white;
+font-family: 'Poppins', sans-serif;
+}
+nav{
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 80px;
+background-color: rgb(218, 89, 89);
+}
+nav ul{
+display: flex;
+justify-content: center;
+}
+nav ul li{
+list-style: none;
+margin: 0 23px;
+}
+ul li a{
+color: white;
+text-decoration: none;
+}
+ul li a:hover{
+color:rgb(177, 54, 54);
+font-size: 1.04rem;
+}
+.right2 img{
+    height: 50px;
+    width: 50px;
+}
