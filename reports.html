@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reports.css">
+    <title>Reports and Analytics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><img src="logo.png" alt="logo"></div>
+            <div class ="right">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="main_page.html">Manage Expenses</a></li>
+                    <li><a href="manage_budget.html">Manage Budgets</a></li>
+                    <li><a href="reports.html">Reports and Analytics</a></li>
+                </ul>
+            </div>
+            <div class="right2">
+                <div class="profile-container">
+                    <img src="profile.png" alt="profile" id="profileImg">
+                    <div class="profile-menu hidden" id="profileMenu">
+                        <div class="welcome-text">Welcome, <span id="usernameDisplay"></span></div>
+                        <button onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <p>Expense Breakdown (Last 7 Days)</p>
+        <div class="chart-container">
+        <canvas id="expenseChart"></canvas>
+        </div>
+    </main>
+
+    <script src="reports.js"></script>
+</body>
+</html>
