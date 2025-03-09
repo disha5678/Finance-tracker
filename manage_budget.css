@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+    transition: all 0.3s ease;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+ul li a:hover {
+    color: white;
+    font-size: 1.04rem;
+}
+
+.left img {
+    height: 130px;
+    width: 143px;
+    transition: transform 0.3s ease;
+}
+
+.left img:hover {
+    transform: scale(1.05);
+}
+
+.right2 img, #profileImg {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.right2 img:hover, #profileImg:hover {
+    transform: scale(1.1);
+}
+
+main {
+    padding-top: 100px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 20px;
+}
+
+main p {
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+    margin-top: 40px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+button {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+/* Form Styling */
+#budgetForm {
+    background-color: white;
+    padding: 30px;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+#budgetForm:hover {
+    transform: translateY(-5px);
+}
+
+#budgetForm h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#budgetForm label {
+    display: block;
+    font-weight: 500;
+    margin-top: 15px;
+    color: #555;
+    font-size: 14px;
+}
+
+#budgetForm input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#budgetForm input:focus {
+    border-color: #ff416c;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 65, 108, 0.1);
+}
+
+#budgetForm button {
+    width: 48%;
+    margin-top: 25px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Table Styling */
+#budgetTableContainer {
+    background-color: white;
+    padding: 30px;
+    margin: 30px auto;
+    width: 95%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    overflow-x: auto;
+}
+
+#budgetTableContainer:hover {
+    transform: translateY(-5px);
+}
+
+table {
+    width: 100%;
+    border-collapse: seperate;
+    border-spacing: 0;
+    margin: 0; /* Remove top margin */
+    background: white;
+    min-width: max-content; /* Ensure table doesn't squish */
+
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    position: sticky; /* Make headers sticky */
+    top: 0;
+    z-index: 1;
+}
+
+td {
+    color: #333;
+    font-size: 14px;
+    padding: 15px;
+    background-color: white; /* Add explicit background */
+    border-bottom: 1px solid #eee;
+}
+
+tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #f8f9fa;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff416c;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff4b2b;
+}
+
+/* Add animation for form appearance */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#budgetForm.show {
+    display: block;
+    animation: slideDown 0.3s ease forwards;
+}
