@@ -1,164 +1,201 @@
-nav{
-    background-color: rgb(218, 89, 89);
-    text-align: center;
-    font-size: 25px;
-    height: 70px;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+nav {
+    position: fixed;
     top: 0;
-    left: 0;
-    z-index: 1000;
     width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
-body{
-    font-family: Arial, sans-serif;
+
+.container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+    backdrop-filter: blur(10px);
+    height: 600px;
+    padding-top: 80px;
 }
+
 .firstSection {
-    font-size: 40px;
+    font-size: 48px;
+    font-weight: 700;
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 10px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .firstSection1 {
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
-    margin-top: 10px; 
-}
-.curved-button{
-            margin-left: 45%;
-            background-color: rgb(218, 89, 89);
-            color: white; 
-            border: none; 
-            padding: 10px 20px; 
-            font-size: 16px; 
-            border-radius: 25px; 
-            cursor: pointer; 
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
-            transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 20px;
+    color: #666;
+    line-height: 1.6;
 }
 
-.curved-button:hover{
-            background-color: darkred; 
-            transform: scale(1.05);
+.curved-button {
+    margin: 40px auto;
+    display: block;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.container{
-    background-color: rgb(242,243,245);
-    height: 500px;
+.curved-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
 }
 
 .features-section {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    padding: 50px 10px;
-    text-align: center;
+    align-items: flex-start;
+    padding: 80px 40px;
+    background: white;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .feature {
     width: 30%;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature i {
+    font-size: 48px;
+    color: #ff416c;
+    margin-bottom: 20px;
 }
 
 .feature h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
 }
 
 .feature p {
     font-size: 16px;
-    color: gray;
+    color: #666;
+    line-height: 1.6;
 }
-.register{
-    text-align: center;
-}
-#registrationForm {
+
+/* Form Styles */
+#registrationForm, #loginForm {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    width: 300px;
-    border-radius: 8px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    animation: slideDown 0.3s ease;
 }
 
-#registrationForm input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }
 
-#registrationForm button {
-    width: 50%;
-    padding: 10px;
-    background-color: rgb(218, 89, 89);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 auto;
-    display: block;
-}
-
-#registrationForm .login-link {
-    margin-top: 10px;
-    margin-left: 10px;
-    text-decoration: none;
-    color: rgb(218,89,89);
-}
-
-.form{
-    margin-left: 30px;
-}
-.login{
+.register, .login {
     text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
 }
 
-#loginForm {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    width: 300px;
-    border-radius: 8px;
-}
-
-#loginForm input {
-    width: 90%;
-    padding: 10px;
+#registrationForm input, #loginForm input {
+    width: 100%;
+    padding: 12px;
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
 }
 
-#loginForm button {
-    width: 50%;
-    padding: 10px;
-    background-color: rgb(218, 89, 89);
+#registrationForm input:focus, #loginForm input:focus {
+    border-color: #ff416c;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 65, 108, 0.1);
+}
+
+#registrationForm button, #loginForm button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    margin: 0 auto;
-    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: all 0.3s ease;
 }
 
-#loginForm .login-link {
-    margin-top: 10px;
-    margin-left: 10px;
+#registrationForm button:hover, #loginForm button:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    transform: translateY(-2px);
+}
+
+.form {
+    font-size: 14px;
+    color: #666;
+}
+
+.login-link {
+    color: #ff416c;
     text-decoration: none;
-    color: rgb(218,89,89);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #ff4b2b;
 }
